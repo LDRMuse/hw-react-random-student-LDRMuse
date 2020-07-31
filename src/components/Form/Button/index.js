@@ -1,18 +1,16 @@
 import React from 'react'
+import PropTypes from "prop-types"
 
-export class Button extends React.Component {
+export const Button = (props) => {
+  const handleClick = (event) => {
+    props.buttonHandler(event)
 
-
-
-
-
-  render() {
-    return (
-      <div>
-      <label></label>
-      <button id="button1">Enter Student</button>
-      <button id="button2">Spin the Wheel</button>
-      </div>
-    )
   }
+
+return <button onClick={handleClick}>{props.buttonTxt}</button>
+}
+
+Button.propTypes = {
+  buttonHandler: PropTypes.func,
+  buttonTxt: PropTypes.string,
 }
