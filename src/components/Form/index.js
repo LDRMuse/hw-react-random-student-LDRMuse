@@ -36,28 +36,29 @@ export class Form extends React.Component {
   addName = ({target}) => {
     this.setState(prevState => ({ student }) => {
       const existingStudent = student.find(function (stud) {
-        return stud.name === newStudent.name
+        return stud.name === prevState.name
       })
 
       if (!existingStudent) {
-        student.push(newStudent)
+        student.push(prevState)
         console.log('added student', student)
       }
     })
 
     }
+    render() {
+      return (
+        <form>
+        {this.renderButtons()}
+        <Input />
+        </form>
+      )
+    }
   }
 
 
 
-  render() {
-    return (
-      <form>
-      {addName()}
-      <Input />
-      </form>
-    )
-  }
+
 
   //So far I've added state to equal and empty student array?
   // there will be two buttons that do different things but for
