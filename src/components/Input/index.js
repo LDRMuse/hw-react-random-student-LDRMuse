@@ -2,30 +2,15 @@ import React from 'react'
 
 import {Buttons} from './Buttons'
 
-export default class Input extends React.Component {
-  state = {
-    currentStudent: '',
-  }
-
-  buttons = [
-    {
-      buttonTxt: 'Enter Student'
-    },
-    {
-      buttonTxt: 'Spin the Wheel'
+export class Input extends React.Component {
+  constructor(props) {
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
+    this.state = [{
+      currentStudent: '',
+      id: 'name'
     },
   ]
-
-  renderButtons = () => {
-    this.buttons.map((button, i) => {
-      return (
-        <Button
-        buttonHandler={this.updateName}
-        buttonTxt={button.buttonTxt}
-        key={i}
-        />
-      )
-    })
   }
 
   updateName = ({target}) => {
@@ -36,11 +21,7 @@ export default class Input extends React.Component {
 
   render() {
     return (
-      <div>
-        <p>{this.state.currentStudent}</p>
-        {this.renderButtons()}
-      </div>
+    <div><label for="name"></label><input handleClick={this.updateName} id={name} placeholder="Student's Name"></div>
     )
   }
-
 }
