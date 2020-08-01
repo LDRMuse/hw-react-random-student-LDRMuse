@@ -2,11 +2,9 @@
 import React from "react"
 import {Form} from './Form'
 
+import { getRandomInt } from "lib"
 
-
-import {getRandomInt} from 'lib'
-
-export default class RandomStudent extends React.Component {
+export class RandomStudent extends React.Component {
 
   state = {
     selectedStudents: '',

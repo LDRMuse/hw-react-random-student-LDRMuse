@@ -3,10 +3,9 @@ import React from 'react'
 
 export const Form = () => {
 
-
   const handleSubmit = (event) => {
     event.preventDefault()
-    formHandler(event)
+
   }
 
   return (
@@ -15,13 +14,13 @@ export const Form = () => {
       <button>Add Student</button>
     </form>
   )
-  }
+}
 
-  Form.defaultProps = {
-    value: '',
-  }
+Form.defaultProps = {
+  value: '',
+}
 
-  Form.propTypes = {
-    formHandler: PropTypes.func,
-    value: PropTypes.string,
-  }
+Form.propTypes = {
+  formHandler: PropTypes.func,
+  value: PropTypes.string,
+}
