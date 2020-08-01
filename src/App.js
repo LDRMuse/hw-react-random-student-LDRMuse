@@ -4,6 +4,6 @@ import { RandomStudent } from './components'
 
 export const App = () => {
   return (
-    <Form />
+    <RandomStudent />
   );
 }

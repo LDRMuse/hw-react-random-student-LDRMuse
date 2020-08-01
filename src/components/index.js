@@ -1,3 +1,3 @@
-export {RandomStudent} from './RandomStudent'
+export { RandomStudent as RandomStudent} from './RandomStudent'
 
 
