@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Form } from './components'
+import { RandomStudent } from './components'
 
 export const App = () => {
   return (

@@ -1,3 +1,3 @@
-export {Form} from './Form'
+export {RandomStudent} from './RandomStudent'
 
 
