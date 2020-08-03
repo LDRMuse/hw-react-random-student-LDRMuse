@@ -2,7 +2,7 @@
 import React from "react"
 import {Form} from './Form'
 
-import { getRandomInt } from "lib"
+import { getRandomIntInclusive } from "lib"
 
 export class RandomStudent extends React.Component {
 
@@ -12,7 +12,7 @@ export class RandomStudent extends React.Component {
   }
 
   handleClick = () => {
-    this.setState({ selectedStudents: this.state.studentList[getRandomInt(0, this.state.studentList.length - 1)]})
+    this.setState({ selectedStudents: this.state.studentList[getRandomIntInclusive(0, this.state.studentList.length - 1)]})
   }
 
   handleForm = ({target}) => {
